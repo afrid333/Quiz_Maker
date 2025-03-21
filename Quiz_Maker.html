@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Online Quiz Maker</h1>
+        <nav>
+            <ul>
+                <li><a href="#quiz-creation">Create Quiz</a></li>
+                <li><a href="#quiz-list">Available Quizzes</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="quiz-creation">
+            <h2>Create a Quiz</h2>
+            <form id="quiz-form">
+                <input type="text" id="quiz-title" placeholder="Quiz Title" required>
+                <div id="questions-container"></div>
+                <button type="button" id="add-question">Add Question</button>
+                <button type="submit">Save Quiz</button>
+            </form>
+        </section>
+        
+        <section id="quiz-list">
+            <h2>Available Quizzes</h2>
+            <ul id="quizzes"></ul>
+        </section>
+        
+        <section id="quiz-taking" style="display: none;">
+            <h2 id="quiz-title-display"></h2>
+            <div id="quiz-questions"></div>
+            <button id="submit-quiz">Submit Quiz</button>
+            <p id="quiz-result"></p>
+        </section>
+        
+        <section id="leaderboard">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-table"></tbody>
+            </table>
+        </section>
+        
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Online Quiz Maker. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
